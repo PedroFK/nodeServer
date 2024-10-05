@@ -1,9 +1,7 @@
-import {createServer} from 'node:http'
+import {fastify} from 'fastify'
 
-const server = createServer((request, response) => {
-    response.write('asdasd')
+const server = fastify()
 
-    return response.end()
+server.listen({
+    port: 3333,
 })
-
-server.listen(3333)
