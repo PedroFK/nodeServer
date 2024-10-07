@@ -4,7 +4,16 @@ export class DatabaseMemory {
     #clients = new Map()
 
     list() {
-        return this.#clients.values()
+        return Array.from(this.#clients.entries()).map((clientArray) => {
+            const id = clientArray[0]
+            const data = clientArray[1]
+            
+            return {
+                id: id,
+                ...data,
+            }
+        })
+
     }
 
     create(clients) {
@@ -17,7 +26,7 @@ export class DatabaseMemory {
         this.#clients.set(id, clients)
     }
 
-    delete(id, clients) {
+    delete(id) {
         this.#clients.delete(id)
     }
 }
