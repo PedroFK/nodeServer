@@ -1,0 +1,25 @@
+POST http://localhost:3200/clients
+Content-type: application/json
+
+{
+    "name": "torquato",
+    "cpf": "157.234.282-12"
+}
+
+###
+
+GET http://localhost:3200/clients
+
+###
+
+PUT http://localhost:3200/clients/769715ab-ca90-455e-8a54-9975fb624abc
+Content-type: application/json
+
+{
+    "name": "pedro",
+    "cpf": "157.234.282-12"
+}
+
+###
+
+DELETE http://localhost:3200/clients/16c83507-a4a6-4347-8ebc-0ef00d8b4545
