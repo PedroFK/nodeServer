@@ -6,7 +6,9 @@ const server = fastify()
 const database = new DatabaseMemory()
 
 server.get('/clients', (request, reply) => {
-    const clients = database.list()
+    const search = request.query.search
+
+    const clients = database.list(search)
     
     return clients
 })

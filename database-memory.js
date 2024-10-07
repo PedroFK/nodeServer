@@ -3,7 +3,7 @@ import { randomUUID } from "node:crypto"
 export class DatabaseMemory {
     #clients = new Map()
 
-    list() {
+    list(search) {
         return Array.from(this.#clients.entries()).map((clientArray) => {
             const id = clientArray[0]
             const data = clientArray[1]
@@ -13,7 +13,13 @@ export class DatabaseMemory {
                 ...data,
             }
         })
+        .filter(client => {
+            if (search) {
+                return client.name.includes(search)
+            }
 
+            return true
+        })
     }
 
     create(clients) {

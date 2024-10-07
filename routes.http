@@ -2,13 +2,13 @@ POST http://localhost:3200/clients
 Content-type: application/json
 
 {
-    "name": "torquato",
+    "name": "joao",
     "cpf": "157.234.282-12"
 }
 
 ###
 
-GET http://localhost:3200/clients
+GET http://localhost:3200/clients?search=joao
 
 ###
 
