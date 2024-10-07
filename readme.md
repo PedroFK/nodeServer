@@ -19,12 +19,16 @@ To run this project, you will need the following tools installed on your machine
 ## Getting Started
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/your-username/nodeServer.git
    cd nodeServer
    ```
-2. install the dependencies:
+2. Install the dependencies:
     ```bash
    npm install
    ```
+3. Start the Fastify server:
+    ```bash
+   npm run dev
+   ```
+4. Use the REST Client extension to test the API by sending requests from the routes.http file.
